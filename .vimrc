@@ -47,18 +47,18 @@ set shiftround
 "" Detecta virtualenv y autocompleta (django)
 "" Hay que tener en sistema la variable "VIRTUAL_ENV"
 "" En linux hay que cambiar la ruta por bin/activate_this.py
-if has('python3')
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-     project_base_dir = os.environ['VIRTUAL_ENV']
-     sys.path.insert(0, project_base_dir)
-     activate_this = os.path.join(project_base_dir, 'bin/activate')
-     execfile(activate_this, dict(__file__=activate_this))
-EOF
-endif
+"if has('python3')
+"py << EOF
+"import os.path
+"import sys
+"import vim
+"if 'VIRTUAL_ENV' in os.environ:
+"     project_base_dir = os.environ['VIRTUAL_ENV']
+"     sys.path.insert(0, project_base_dir)
+"     activate_this = os.path.join(project_base_dir, 'bin/activate')
+"     execfile(activate_this, dict(__file__=activate_this))
+"EOF
+"endif
 
 "" Syntastic
 "set statusline+=%#warningmsg#
@@ -79,3 +79,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "" NerdTree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"" Jedi-vim
+let g:jedi#popup_on_dot = 0
+"let g:jedi#force_py_version = 3

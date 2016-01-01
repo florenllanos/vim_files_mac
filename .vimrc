@@ -76,3 +76,6 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+"" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

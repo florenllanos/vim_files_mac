@@ -13,6 +13,7 @@ syntax on
 "" Color y fuentes
 set background=dark
 "colorscheme solarized
+"let g:solarized_termcolors=256
 
 "" Barra de estado (Powerline)
 "" Fuentes para windows: https://github.com/powerline/fonts

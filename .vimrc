@@ -83,3 +83,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "" Jedi-vim
 let g:jedi#popup_on_dot = 0
 "let g:jedi#force_py_version = 3
+
+"" Matchit
+runtime bundle/matchit.vim
